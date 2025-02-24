@@ -20,14 +20,4 @@ module.exports = [
   'strapi::public',
 ];
 
-// module.exports = {
-//   settings: {
-//     cors: {
-//       enabled: true,
-//       origin: process.env.CORS_ORIGIN.split(','), // Split the environment variable into an array
-//       headers: ['Content-Type', 'Authorization', 'X-Frame-Options'],
-//       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-//       credentials: true,
-//     },
-//   },
-// };
+

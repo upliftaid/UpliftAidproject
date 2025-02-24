@@ -55,7 +55,7 @@ h5,
 }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #000 !important;
+    background: #388782 !important;
     top: 0;
     position: relative;
   }
@@ -840,84 +840,226 @@ textarea.form-control {
 }
 
 
+/* footer section css */
 
-.footer{
-  background-color: #0f5253;
-  width: 100%;
-  padding-left: 100px;
-  padding-top: 50px;
-  padding-right: 15px;
-  color: #fff;
-}
-.social-logo{
-  font-size: 50px;
-  color: #206d6c;
-  display: inline-block;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-
-.footer .heading-section {
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  letter-spacing: 0.1em;
-  color: #fff !important;
-  font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    background: #206d6c;
 }
-.footer .block-21 .heading a {
-  color: #fff !important;
+footer .footer-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 50px;
 }
-.footer .block-21 .heading a:hover {
-  color: #388782 !important;
+footer .footer-container .sec h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
-.footer .block-21 .meta a {
-  color: gray !important;
+footer .footer-container .sec h2::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #ff008c;
 }
-.footer .block-21 .meta a:hover {
-  color: #fff !important;
-}
-.footer a {
-  color: #388782;
-}
-.footer a:hover {
-  color: #fff !important;
+footer .footer-container .sec p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
 }
 
-
- .ftco-footer-social li a {
-  height: 60px;
-  width: 60px;
-  display: block;
-  float: left;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  position: relative;
-}
-.ftco-footer-social li a span {
-  position: absolute;
-  font-size: 26px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.ftco-footer-social li a:hover {
-  color: #388782;
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.footer-small-nav > li {
-  display: inline-block;
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
 }
-.footer-small-nav > li a {
-  margin: 0 10px 10px 0;
+
+
+.fa-facebook {
+  background: #1877F2;
+  color: white;
 }
-.footer-small-nav > li a:hover,
-.footer-small-nav > li a:focus {
-  color: #388782;
-} 
+
+.fa-linkedin {
+  background: #0077B5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #FF0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #c13584;
+  color: white;
+}
+.usefullinks{
+    position: relative;
+}
+.usefullinks li{
+    list-style: none;
+}
+.usefullinks li a{
+    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+    line-height: 30px;
+    color: #fff;
+    transition: 0.3s;
+}
+.usefullinks li a:hover{
+    color: #ff008c;
+}
+.shop{
+    position: relative;
+}
+.shop li{
+    list-style: none;
+}
+.shop li a{
+    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+    line-height: 30px;
+    color: #fff;
+    transition: 0.3s;
+}
+.shop li a:hover{
+    color: #ff008c;
+}
+.info{
+    position: relative;
+}
+.info li{
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    margin-bottom: 20px;
+}
+.info li span{
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+}
+.info li span i{
+    color: #fff;
+    font-size: 20px;
+}
+.info li span i.bx{
+    margin-top: 4px;
+}
+footer .footer-container .sec p a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+footer .footer-container .sec p a:hover{
+    color: #ff008c;
+}
+.copyright{
+    position: relative;
+    padding: 16px 20px;
+    background: #206d6c;
+}
+.copyright p{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 992px) {
+  footer .footer-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+  }
+
+  footer {
+      padding: 30px 40px;
+  }
+
+  footer .footer-container .sec h2 {
+      margin-bottom: 15px;
+  }
+
+  footer .footer-container .sec p {
+      font-size: 14px;
+      line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-container {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+  }
+
+  footer {
+      padding: 20px 30px;
+  }
+
+  .fa {
+      font-size: 24px;
+      padding: 15px;
+      width: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .footer-container {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      padding: 10px 20px;
+  }
+
+  footer {
+      padding: 20px;
+  }
+
+  footer .footer-container .sec {
+      margin-bottom: 15px;
+  }
+
+  .fa {
+      font-size: 20px;
+      padding: 10px;
+      width: 30px;
+  }
+}
+
+
+/* @media screen and (max-width:990px) {
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    footer{
+        padding: 50px 40px;
+    }
+}
+@media screen and (max-width:500px){
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
 
 
 .container-fluid {
@@ -1009,8 +1151,8 @@ textarea.form-control {
 }
 
 .section-2-blocks-wrapper-2 .quote {
-  background: #97de95;
-  background: #f7ca44;
+  background: #206d6c;
+  background: #388782;
   color: #000;
   width: 100%;
   font-size: 24px;

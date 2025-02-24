@@ -97,6 +97,3 @@ document.getElementById("sort-filter").addEventListener("change", (e) => {
 
 // Fetch blogs when the page loads
 fetchBlogs();
-
-// LATEST BLOGS IN HOME PAGE
-
