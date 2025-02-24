@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraisers",
+  "info": {
+    "singularName": "fundraiser",
+    "pluralName": "fundraisers",
+    "displayName": "Fundraiser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "goalAmount": {
+      "type": "decimal",
+      "required": true
+    },
+    "raisedAmount": {
+      "type": "decimal",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Healthcare",
+        "Education",
+        "Environment",
+        "Hunger",
+        "EmergencyRelief"
+      ],
+      "required": true
+    },
+    "activeOrNot": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
