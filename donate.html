@@ -161,6 +161,7 @@
             <h1>Be a Donor</h1>
             <form action="#" id="donor-form">
               <div class="form-group">
+                <label for="name">Full Name</label>
                 <input
                   type="text"
                   class="form-control px-3 py-3"
@@ -171,6 +172,7 @@
                 />
               </div>
               <div class="form-group">
+                <label for="name">Email</label>
                 <input
                   type="email"
                   class="form-control px-3 py-3"
@@ -180,6 +182,22 @@
                   required
                 />
               </div>
+              <div class="form-group">
+                <label for="name">Upload Image</label>
+                <input
+                  type="file"
+                  class="form-control px-3 py-3"
+                  placeholder="Upload Image"
+                  id="file"
+                  name="File"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <p class="alert-message">
+                <span class="ion-ios-alert"></span> Image is required to show on
+                latest donation.
+              </p>
               <!-- Predefined Amounts -->
               <div class="form-group">
                 <button
@@ -205,6 +223,7 @@
                 </button>
               </div>
               <div class="form-group">
+                <label for="name">Amount</label>
                 <input
                   type="number"
                   id="amount"
@@ -216,6 +235,7 @@
               </div>
 
               <div class="form-group">
+                <label for="name">Message</label>
                 <textarea
                   name="Message"
                   id="message"
@@ -225,19 +245,19 @@
                   placeholder="Message"
                 ></textarea>
               </div>
-
               <div class="form-group">
+                <label for="name">Select Fundraisers</label>
                 <input
                   type="text"
                   id="fund"
                   name="fund"
-                  placeholder="Select From Current Fundraisers"
                   class="form-control px-3 py-3"
-                  required
+                  placeholder="Select From Current Fundraisers"
                 />
               </div>
 
               <div class="form-group">
+                <label for="name">Select Payment</label>
                 <select
                   id="payment-method"
                   name="payment-method"
