@@ -11,7 +11,7 @@ document
     formData.append("coverLetter", document.getElementById("message").value);
 
     try {
-      const response = await fetch("http://localhost:3000/application", {
+      const response = await fetch("http://localhost:3000/api/application", {
         method: "POST",
         body: formData,
       });

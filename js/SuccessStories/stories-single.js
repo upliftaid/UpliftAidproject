@@ -2,11 +2,11 @@ const fetchStories = async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const storyId = urlParams.get("id");
   try {
-    await fetch(`http://localhost:3000/story/${storyId}/view`, {
+    await fetch(`http://localhost:3000/api/story/${storyId}/view`, {
       method: "POST",
     });
 
-    const response = await fetch(`http://localhost:3000/story/${storyId}`, {
+    const response = await fetch(`http://localhost:3000/api/story/${storyId}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -71,7 +71,7 @@ const displayStories = (post) => {
 const fetchMostViewedStories = async () => {
   try {
     const response = await fetch(
-      `http://localhost:3000/story?sort=-views&limit=5`,
+      `http://localhost:3000/api/story?sort=-views&limit=5`,
       {
         method: "GET",
       }
@@ -102,10 +102,10 @@ const displayMostViewedPosts = (posts) => {
     postElement.className = "most-viewed-post";
     postElement.innerHTML = `
       <div class="post-entry ">
-        <a href="blog-single.html?id=${post.documentId}" class="mb-3 img-wrap">
+        <a href="success-story-single?id=${post.documentId}" class="mb-3 img-wrap">
           <img src="${imageUrl}" alt="blog_image" class="img-fluid" />
         </a>
-        <h4 class='mb-5'><a href="blog-single.html?id=${post.documentId}">${post.title}</a></h4>
+        <h4 class='mb-5'><a href="success-story-single?id=${post.documentId}">${post.title}</a></h4>
       </div>
     `;
 

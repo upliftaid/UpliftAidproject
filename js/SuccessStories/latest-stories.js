@@ -1,6 +1,6 @@
 async function latestStories() {
   try {
-    const response = await fetch("http://localhost:3000/story");
+    const response = await fetch("http://localhost:3000/api/story");
     const data = await response.json();
     const stories = data.data;
 
@@ -32,7 +32,7 @@ async function latestStories() {
                 <h2>${post.title}</h2>
                 <p class="mb-3">${post.descriptionHtml.substring(0, 150)}...</p>
                 <p>
-                  <a href="success-story-single.html?id=${post.documentId}" class="btn btn-success btn-hover-white py-3 px-5">Read The Full Story</a>
+                  <a href="success-story-single?id=${post.documentId}" class="btn btn-success btn-hover-white py-3 px-5">Read The Full Story</a>
                 </p>
               </div>
             </div>

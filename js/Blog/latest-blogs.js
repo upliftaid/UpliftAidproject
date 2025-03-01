@@ -1,6 +1,6 @@
 async function latestBlogs() {
     try {
-      const response = await fetch("http://localhost:3000/posts");
+      const response = await fetch("http://localhost:3000/api/posts");
       const data = await response.json();
       const posts = data.data;
   
@@ -26,21 +26,21 @@ async function latestBlogs() {
         );
         postElement.innerHTML = `
                 <div class="post-entry">
-                  <a href=blog-single.html?id=${
+                  <a href=blog-single?id=${
                     post.documentId
                   } class="mb-3 img-wrap">
                     <img src="${
                       post.images
                     }" alt="Image placeholder" class="img-fluid" />
                   </a>
-                  <h3><a href=blog-single.html?id=${post.documentId}>${
+                  <h3><a href=blog-single?id=${post.documentId}>${
           post.title
         }</a></h3>
                   <span class="date mb-4 d-block text-muted">${new Date(
                     post.publishDate
                   ).toLocaleDateString()}</span>
                   <p>${post.descriptionHtml.substring(0, 98)}...</p>
-                  <p><a href=blog-single.html?id=${
+                  <p><a href=blog-single?id=${
                     post.documentId
                   } class="link-underline">Read More</a></p>
                 </div>

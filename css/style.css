@@ -39,6 +39,7 @@ h5,
   color: #000;
   font-weight: 300;
   font-family: "Dosis", sans-serif;
+  padding-bottom: 20px;
 }
 
 .text-primary {
@@ -878,39 +879,22 @@ footer .footer-container .sec p{
     color: #fff;
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
+.footer-container a {
+  padding: 10px;
+  font-size: 40px;
   width: 50px;
   text-align: center;
   text-decoration: none;
 }
 
 /* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
+.footer-container a {
+  color: #fff;
+}
+.footer-container a:hover {
+  color: #0f5253;
 }
 
-
-.fa-facebook {
-  background: #1877F2;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #0077B5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #FF0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #c13584;
-  color: white;
-}
 .usefullinks{
     position: relative;
 }
@@ -926,7 +910,8 @@ footer .footer-container .sec p{
     transition: 0.3s;
 }
 .usefullinks li a:hover{
-    color: #ff008c;
+    color: #0f5253;
+    text-decoration: underline;
 }
 .shop{
     position: relative;
@@ -943,7 +928,8 @@ footer .footer-container .sec p{
     transition: 0.3s;
 }
 .shop li a:hover{
-    color: #ff008c;
+    color: #0f5253;
+    text-decoration: underline;
 }
 .info{
     position: relative;
@@ -967,12 +953,13 @@ footer .footer-container .sec p{
 }
 footer .footer-container .sec p a{
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
     transition: 0.3s;
 }
 footer .footer-container .sec p a:hover{
-    color: #ff008c;
+    color: #0f5253;
+    text-decoration: underline;
 }
 .copyright{
     position: relative;
@@ -1016,7 +1003,7 @@ footer .footer-container .sec p a:hover{
       padding: 20px 30px;
   }
 
-  .fa {
+  .footer-container a {
       font-size: 24px;
       padding: 15px;
       width: 40px;
@@ -1407,7 +1394,7 @@ footer .footer-container .sec p a:hover{
   display: block;
   font-size: 72px;
   font-weight: bold;
-  color: #f7ca44;
+  color: #388782;
 }
 
 .ftco-counter .ftco-label {
@@ -1466,7 +1453,7 @@ footer .footer-container .sec p a:hover{
 .block-21 .text .heading a:hover,
 .block-21 .text .heading a:active,
 .block-21 .text .heading a:focus {
-  color: #f7ca44;
+  color: #388782;
 }
 
 .block-21 .text .meta > div {
@@ -1612,6 +1599,10 @@ footer .footer-container .sec p a:hover{
   color: #000;
 }
 
+.block-6{
+  padding-bottom: 40px;
+}
+
 .block-6 .icon {
   margin-right: 30px;
   color: #388782;
@@ -1627,16 +1618,16 @@ footer .footer-container .sec p a:hover{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #fbe6a6;
+  background: #388782;
   z-index: -1;
 }
 
 .block-6 .media-body .heading {
-  font-size: 18px;
+  font-size: 27px;
 }
 
 .block-6 .media-body p {
-  color: #a2a2a2;
+  color: #747272;
 }
 .block-6 .media-body p:last-child {
   margin-bottom: 0;

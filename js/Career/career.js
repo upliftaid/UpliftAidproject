@@ -1,6 +1,6 @@
 const fetchCareers = async () => {
   try {
-    const response = await fetch("http://localhost:3000/career", {
+    const response = await fetch("http://localhost:3000/api/career", {
       method: "GET",
     });
 

@@ -3,7 +3,7 @@ const fetchFundraiser = async () => {
   const fundraiserId = urlParams.get("id");
   try {
     const response = await fetch(
-      `http://localhost:3000/fundraisers/${fundraiserId}`,
+      `http://localhost:3000/api/fundraisers/${fundraiserId}`,
       {
         method: "GET",
       }
@@ -43,7 +43,7 @@ const displayFundraiser = (fundraiser) => {
                       fundraiser.goalAmount
                     }</p>
           <p><strong>Raised amount:</strong> $${fundraiser.raisedAmount}</p>
-          <button class="btn btn-success" onclick="window.location.href='donate.html?id=${
+          <button class="btn btn-success" onclick="window.location.href='/donate?id=${
             fundraiser.documentId
           }'">Donate Now</button>
       </div></div>

@@ -15,7 +15,7 @@ document
     };
 
     try {
-      const response = await fetch("http://localhost:3000/volunteer", {
+      const response = await fetch("http://localhost:3000/api/volunteer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

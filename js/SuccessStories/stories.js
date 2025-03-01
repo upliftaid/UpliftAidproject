@@ -1,6 +1,6 @@
 const fetchStories = async () => {
   try {
-    const response = await fetch("http://localhost:3000/story", {
+    const response = await fetch("http://localhost:3000/api/story", {
       method: "GET",
     });
 
@@ -23,19 +23,19 @@ const displayFetchStories  = (postData) => {
     postElement.className = "col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0";
     postElement.innerHTML = `
         <div class="post-entry">
-          <a href="success-story-single.html?id=${
+          <a href="success-story-single?id=${
             post.documentId
           }" class="mb-3 img-wrap">
             <img src="${imageUrl}" alt="blog_image" class="img-fluid" />
           </a>
-          <h3><a href="success-story-single.html?id=${post.documentId}">${
+          <h3><a href="success-story-single?id=${post.documentId}">${
       post.title
     }</a></h3>
           <span class="date mb-4 d-block text-muted">${new Date(
             post.publishDate
           ).toLocaleDateString()}</span>
           <p>${post.descriptionHtml.substring(0, 100)}...</p>
-          <p><a href="success-story-single.html?id=${
+          <p><a href="success-story-single?id=${
             post.documentId
           }" class="link-underline">Read More</a></p>
 
