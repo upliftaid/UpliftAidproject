@@ -28,7 +28,14 @@ app.use(
   express.static(path.join(__dirname, "../css/fonts/ionicons/fonts"))
 ); // Serve ionicons fonts correctly
 
-app.use(cors());
+// CORS Configuration
+const corsOptions = {
+  origin: [process.env.CLIENT_URL], // Replace with your Hostinger domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
 
 // Use middleware
 app.use(compression());
