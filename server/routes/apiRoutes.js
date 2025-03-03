@@ -25,8 +25,6 @@ const cacheMiddleware = (req, res, next) => {
   next();
 };
 
-
-
 router.get("/posts", cacheMiddleware, async (req, res) => {
   try {
     const response = await axios.get(
@@ -473,5 +471,45 @@ router.post("/contact", async (req, res) => {
     res.status(500).json({ error: "Something went wrong" });
   }
 });
+
+router.get("/leaderships", cacheMiddleware, async (req, res) => {
+  try {
+    const response = await axios.get(
+      `${process.env.STRAPI_API_URL}/api/leaderships?populate=*`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
+        },
+      }
+    );
+
+    const modifiedData = response.data.data.map((leader) => {
+      const imageUrl =
+        leader.images?.formats?.medium?.url
+          ? `${process.env.STRAPI_API_URL}${leader.images.formats.medium.url}`
+          : null;
+      
+
+      return {
+        id: leader.id,
+        images: imageUrl,
+        name: leader.name,
+        role: leader.position,
+        about: leader.about,
+      };
+    });
+    res.json({ data: modifiedData });
+  } catch (error) {
+    console.error(
+      "Error fetching leadership data: ",
+      error.response ? error.response.data : error.message
+    );
+    res.status(500).json({ error: "Something went wrong" });
+  }
+});
+
+
+
+
 
 export default router;

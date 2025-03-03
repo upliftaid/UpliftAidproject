@@ -2640,8 +2640,10 @@ footer .footer-container .sec p a:hover{
 
 .block-38 .block-38-header img {
   width: 150px;
+  height: 200px;
   border-radius: 7px;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .img-shadow {

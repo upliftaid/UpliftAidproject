@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leaderships",
+  "info": {
+    "singularName": "leadership",
+    "pluralName": "leaderships",
+    "displayName": "Leadership"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

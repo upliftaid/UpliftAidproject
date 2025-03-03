@@ -602,6 +602,37 @@ export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLeadershipLeadership extends Struct.CollectionTypeSchema {
+  collectionName: 'leaderships';
+  info: {
+    displayName: 'Leadership';
+    pluralName: 'leaderships';
+    singularName: 'leadership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    images: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::leadership.leadership'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    position: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSuccessStorieSuccessStorie
   extends Struct.CollectionTypeSchema {
   collectionName: 'success_stories';
@@ -1187,6 +1218,7 @@ declare module '@strapi/strapi' {
       'api::contact.contact': ApiContactContact;
       'api::fundraiser.fundraiser': ApiFundraiserFundraiser;
       'api::gallery.gallery': ApiGalleryGallery;
+      'api::leadership.leadership': ApiLeadershipLeadership;
       'api::success-storie.success-storie': ApiSuccessStorieSuccessStorie;
       'api::volunteer.volunteer': ApiVolunteerVolunteer;
       'plugin::content-releases.release': PluginContentReleasesRelease;
